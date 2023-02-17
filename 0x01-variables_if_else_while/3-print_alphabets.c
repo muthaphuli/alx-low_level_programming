@@ -1,6 +1,6 @@
 /*
  * File: 2-print_alphabet.c
- * Auth:Winston Muthaphuli 
+ * Auth:Winston MuthaphulI
  */
 
 #include <stdio.h>
