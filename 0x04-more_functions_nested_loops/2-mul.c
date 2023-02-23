@@ -1,4 +1,5 @@
-i/**
+#include <MAIN_H>
+/**
  * main - multiplies two integers
  *
  * Return: Always 0.
