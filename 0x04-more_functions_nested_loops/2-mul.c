@@ -1,8 +1,11 @@
 #include <MAIN_H>
+
 /**
- * main - multiplies two integers
+ * mul - multiplies 2 values
+ * @a: first value.
+ * @b: second value.
  *
- * Return: Always 0.
+ * Return: The sum (int).
  */
 int mul(int a, int b)
 {
