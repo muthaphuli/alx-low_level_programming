@@ -1,27 +1,29 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - prints the largest prime factor of the number 612852475143
  *
- * Return: always 0 (sucess)
+ * Description:
+ *		- A factor is a number that can be evenly divided into another number.
+ *			For example, the factors of 6 are 1, 2, 3, and 6.
+ *		- A prime factor is a factor that is also a prime number, which means
+ *			it can only be divided by 1 and itself. For example, the prime
+ *			factors of 6 are 2 and 3.
+ *
+ * Return: 0
  */
 int main(void)
 {
-	unsigned long int num = 612852475143;
-	unsigned long int prim;
+	long int n = 612852475143;
+	long int i;
 
-	prim = 3;
-	while (prim < num / 2)
+	for (i = 2; i < n; i++)
 	{
-		if ((num % prim) == 0)
-		{
-			if((prim % 3) == 2)
-				printf(",%lu ", prim);
-		}
-
-		prim+=2;
+		while (n % i == 0)
+			n /= i;
 	}
 
-	putchar('\n');
+	printf("%ld\n", n);
+
 	return (0);
 }
