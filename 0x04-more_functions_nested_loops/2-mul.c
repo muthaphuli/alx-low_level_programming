@@ -1,4 +1,4 @@
-#include <MAIN_H>
+#include <main.h>
 
 /**
  * mul - multiplies 2 values
