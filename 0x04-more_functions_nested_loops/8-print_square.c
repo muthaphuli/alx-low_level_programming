@@ -1,21 +1,23 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints Fizz for multiples of 3, Buzz for multiples of 5, and FizzBuzz
- * for multiples of both 3 and 5. Otherwise, prints the number.
- * Return: 0
+ * print_square - prints a square, followed by a new line
+ * @size: size of the square
+ * Return: void
  */
-int main(void)
+void print_square(int size)
 {
-	int i;
+	int i, j;
 
-	for (i = 1; i <= 100; i++)
+	if (size > 0)
 	{
-		(i % 3 == 0) ? printf("Fizz") : 0;
-		(i % 5 == 0) ? printf("Buzz") : 0;
-		(i % 3 != 0 && i % 5 != 0) ? printf("%d", i) : 0;
-		(i != 100) ? printf(" ") : 0;
+		for (i = 0; i < size; i++)
+		{
+			for (j = 0; j < size; j++)
+				_putchar('#');
+			_putchar('\n');
+		}
 	}
-	printf("\n");
-	return (0);
+	else
+		_putchar('\n');
 }
