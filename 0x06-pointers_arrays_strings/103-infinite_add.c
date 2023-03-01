@@ -35,11 +35,15 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int len2 = strlen(n2);
 	int i, j, k, sum, carry = 0;
 
-	/* if the result buffer is too small, return 0 */
-	if (len1 + len2 > size_r)
+	/**
+	 *  if the result buffer is too small, return 0 
+	 */
+	if (len1 + len2 > size_r)i
 		return (0);
 
-	/* Perform addition */
+	/**
+	 *  Perform addition
+	 */
 	for (i = len1 - 1, j = len2 - 1, k = 0;
 		i >= 0 || j >= 0 || carry;
 		i--, j--, k++)
@@ -51,15 +55,21 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		carry = sum / 10;
 	}
 
-	/* if the result is empty, return 0 */
+	/* 
+	 *if the result is empty, return 0 
+	 */
 	if (k == 0)
 		return (0);
 
-	/* null terminate the result */
+	/*
+	 *null terminate the result 
+	 */
 	r[k] = '\0';
 
-	/* reverse the result string */
+	/*
+	 *reverse the result string
+	 */
 	reverse(r);
 
 	return (r);
-}
+}i
