@@ -4,7 +4,6 @@
 int give_change(int money);
 
 /**
- *
  * main - prints the minimum number of coins to make change
  * for an amount of money
  * @argc: number of arguments.
