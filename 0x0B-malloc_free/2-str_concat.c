@@ -6,6 +6,7 @@
  * @s1: string 1/2 to concat.
  * @s2: string 2/2 to concat.
  *
+ *
  * Return: Pointer to concatenated string.
  */
 char *str_concat(char *s1, char *s2)

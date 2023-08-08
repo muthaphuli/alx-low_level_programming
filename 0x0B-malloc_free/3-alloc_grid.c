@@ -7,6 +7,7 @@
  * @width: colums.
  * @height: rows.
  *
+ *
  * Return: Pointer to 2d array.
  */
 int **alloc_grid(int width, int height)
