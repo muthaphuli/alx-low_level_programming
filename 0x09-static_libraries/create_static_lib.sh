@@ -38,7 +38,7 @@ function print_success(){
 print_header
 
 # Compile the source code into object files
-print_info "Compiling source code into object files..."
+print_info "Compiling source code into object files... "
 if gcc -c -Wall -pedantic -Werror -Wextra -I. ./*.c; then
   echo -e "${GREEN}\t[ done ]${NC}"
 else
