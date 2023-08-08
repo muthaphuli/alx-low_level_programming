@@ -1,76 +1,48 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int give_change(int money);
-
 /**
- * main - prints the minimum number of coins to make change
- * for an amount of money
- * @argc: number of arguments.
- * @argv: amount of money given in singles.
+ * main - prints the minimum number of coins to make change for an amount of
+ * money, followed by a new line
  *
- * Return: 0 (sucesss) , 1 (Failure)
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	int money, change;
+	int i, cents, coins = 0;
+	int denominations[5];
+	int num_denominations;
 
-	money = change = 0;
-
+	/* check for correct number of arguments */
 	if (argc != 2)
+		return (printf("Error\n"), 1);
+
+	/* convert cents to integer */
+	cents = atoi(argv[1]);
+
+	/* check for negative cents */
+	if (cents < 0)
+		return (printf("0\n"), 0);
+
+	/* initialize denominations array */
+	denominations[0] = 25;
+	denominations[1] = 10;
+	denominations[2] = 5;
+	denominations[3] = 2;
+	denominations[4] = 1;
+
+	/* calculate the size of the array */
+	num_denominations = sizeof(denominations) / sizeof(int);
+
+	/* calculate the number of coins */
+	for (i = 0; i < num_denominations && cents; i++)
 	{
-		printf("Error\n");
-		return (1);
+		coins += cents / denominations[i];
+		cents %= denominations[i];
 	}
 
-	money = atoi(argv[1]);
-	change = give_change(money);
-
-	printf("%d\n", change);
+	printf("%d\n", coins);
 	return (0);
-}
-
-/**
- * give_change - find the minimum number of coins to make change
- * for an amount of money
- * @money: amount of money given in singles.
- *
- * Return: min amount of coins. (INT)
- */
-int give_change(int money)
-{
-	int one, two, five, ten, tf, sum;
-
-	sum = one = two = five = ten = tf = 0;
-
-	if (money <= 0)
-	{
-		return (0);
-	}
-
-	if (money >= 25)
-	{
-		tf = money / 25;
-		money -= tf * 25;
-	}
-
-	if (money < 25 && money >= 10)
-	{
-		ten = money / 10;
-		money -= ten * 10;
-	}
-
-	if (money < 10 && money >= 5)
-	{
-		five = money / 5;
-		money -= five * 5;
-	}
-	if (money < 5 && money >= 2)
-		two = money / 2;
-		money -= two * 2;
-	if (money < 2)
-		one = money;
-
-	sum = tf + ten + five + two + one;
-	return (sum);
 }
