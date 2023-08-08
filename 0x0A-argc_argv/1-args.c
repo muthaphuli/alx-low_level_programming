@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 /**
- *
  * main - Entry point, Also print number of arguments starting a 0.
  * @argc: count
  * @argv: arguments string
