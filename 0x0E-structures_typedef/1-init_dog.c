@@ -1,7 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * 
  * init_dog - create dog in function
  * @hobbes: dog object
  * @name: name of dog
