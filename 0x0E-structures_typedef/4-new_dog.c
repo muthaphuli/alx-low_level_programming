@@ -16,7 +16,7 @@ void _strcopy(char *dst, char *src)
 }
 
 /**
- * new_dog - create new dog from the dna of the first dog.
+ * new_dog - create new dog from the dna of the first dog..
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
