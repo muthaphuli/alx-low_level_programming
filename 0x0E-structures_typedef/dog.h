@@ -4,6 +4,7 @@
  * struct dog - dog object
  * @name: name of dog
  * @age: age of dog
+ * 
  * @owner: dog owner
  **/
 typedef struct dog
