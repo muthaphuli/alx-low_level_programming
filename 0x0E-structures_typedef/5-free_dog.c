@@ -3,7 +3,7 @@
 
 /**
  * free_dog - free(memory) dah dog and get fined by animal control
- * @d: pointer to dog stuct in memory.
+ * @d: pointer to dog stuct in memory
  *
  * Return: nothing
  */
