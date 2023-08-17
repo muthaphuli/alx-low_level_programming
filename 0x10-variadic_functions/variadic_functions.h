@@ -6,7 +6,7 @@
 /**
  * struct print - struct for printing different types
  * @param: format specifier
- * @f: function to print
+ * @f: shows function to print
  */
 typedef struct print
 {

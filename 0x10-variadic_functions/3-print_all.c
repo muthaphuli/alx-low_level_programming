@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_char - prints a character
+ * print_char - it prints a character
  * @ap: va_list containing the character to print
  */
 void print_char(va_list ap)
