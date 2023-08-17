@@ -1,6 +1,6 @@
 /**
  * print_name - prints a name
- * @name: name to print
+ * @name: This is the name to print
  * @f: function pointer
  * Return: void
  */
